@@ -1,10 +1,13 @@
+import { css } from '@emotion/react'
 import React from 'react'
+import Navbar from './components/Navbar'
+
 
 const App = () => {
   return (
-    <div className='bg-[red] w-80 h-80'>
-      
-    </div>
+    <>
+    <Navbar />
+    </>
   )
 }
 
