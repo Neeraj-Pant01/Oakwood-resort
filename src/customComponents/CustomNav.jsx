@@ -41,7 +41,7 @@ const CustomNav = () => {
   return (
     <Container>
         <Wrapper>
-        <Typography variant='h5' fontWeight={"bold"} color={"black"}>OAKWOOD RESORT</Typography>
+        <Typography variant='h5' fontWeight={"bold"} color={"white"}>OAKWOOD RESORT</Typography>
         </Wrapper>
         <Wrapper flex="2" gap="10">
             {
