@@ -42,10 +42,12 @@ function Navbar() {
         position: "sticky",
         top:"0",
         color: "black",
+        height:40,
         backgroundColor: "#FEF3F3",
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
+        boxShadow:"none",
         justifyContent: "space-between",
         padding: "10px 60px"
     })
@@ -54,22 +56,23 @@ function Navbar() {
 const Wrapper = styled.div`
 // border:2px solid red;
 flex-direction:${(props) => props.direction || "row"};
-width: max-content;
+width: 25%;
+justify-content:space-between;
 display:flex;
 `
 
 
     return (
         <>
-            <StyledAppbar>
-                <Wrapper direction="column">
+            {/* <StyledAppbar>
+                <Wrapper direction="row">
                     <Typography>email@email.com</Typography>
                     <Typography>9012010713</Typography>
                 </Wrapper>
                 <Wrapper>
 
                 </Wrapper>
-            </StyledAppbar>
+            </StyledAppbar> */}
             <CustomNav />
         </>
     );
