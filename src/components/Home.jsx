@@ -1,6 +1,10 @@
 import React from 'react'
 import Carousal from '../customComponents/Carousal'
 import styled from '@emotion/styled'
+import ResortInfo from './ResortInfo';
+import DemoRooms from './DemoRooms';
+import Excellence from './Excellence';
+import Reviews from './Reviews';
 
 const images = ["/slide2.jpg", "/slide3.webp", "/slide1.jpeg"]
 
@@ -45,11 +49,17 @@ z-index:200;
 const Home = () => {
 
   return (
+    <>
     <StyledBox>
     <Container>
     <Carousal />
     </Container>
     </StyledBox>
+    <ResortInfo />
+    <DemoRooms />
+    <Excellence />
+    <Reviews />
+    </>
   )
 }
 
