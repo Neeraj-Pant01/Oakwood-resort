@@ -6,10 +6,14 @@ import PhoneIcon from '@mui/icons-material/Phone';
 const Container = styled.div`
 // border:2px solid red;
 position:sticky;
+top:0;
+// height:100px;
 display:flex;
 align-items:center;
 padding:30px 75px;
 justify-content:space-between;
+background:transparent;
+background-color:transparent;
 `
 const Wrapper = styled.div`
 // border:2px solid red;
@@ -44,7 +48,7 @@ const CustomNav = () => {
             {
                 Links.map((l,i)=>{
                     return (
-                        <Typography color={i===0 ? "#ffa37b":"white"}>{l}</Typography>
+                        <Typography key={i} color={i===0 ? "#ffa37b":"white"}>{l}</Typography>
                     )
                 })
             }
