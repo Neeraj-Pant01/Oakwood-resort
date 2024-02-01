@@ -1,14 +1,14 @@
 import styled from '@emotion/styled'
 import { Button, Typography } from '@mui/material'
 import React from 'react'
+import PhoneIcon from '@mui/icons-material/Phone';
 
 const Container = styled.div`
 // border:2px solid red;
 position:sticky;
-top:60px;
 display:flex;
 align-items:center;
-padding:20px 150px;
+padding:30px 75px;
 justify-content:space-between;
 `
 const Wrapper = styled.div`
@@ -21,7 +21,18 @@ gap:40px;
 // gap:${(props)=>props.gap || "1"};
 `
 
-const Links = ["Home", "Discover", "About us", "Online Booking"]
+const StyledButton =styled('div')({
+    display:'flex',
+    justifyContent:"center",
+    alignItems:"center",
+    gap:10,
+    background:'#ffa37b',
+    width:152,
+    height:54,
+    color:"white"
+})
+
+const Links = ["Home", "Discover","Blog", "About us","Contact Us"]
 
 const CustomNav = () => {
   return (
@@ -33,13 +44,14 @@ const CustomNav = () => {
             {
                 Links.map((l,i)=>{
                     return (
-                        <Typography color={i===0 ? "lightblue":"black"}>{l}</Typography>
+                        <Typography color={i===0 ? "#ffa37b":"white"}>{l}</Typography>
                     )
                 })
             }
-        </Wrapper>
         <Wrapper flex="0.2">
-        <Button variant='contained' sx={{backgroundColor:"lightblue",":hover":{backgroundColor:"lightblue",opacity:"0.8"}}}>Book</Button>
+        <StyledButton variant='contained'>Book Online</StyledButton>
+        <StyledButton variant='contained'><PhoneIcon />9520593613</StyledButton>
+        </Wrapper>
         </Wrapper>
     </Container>
   )
