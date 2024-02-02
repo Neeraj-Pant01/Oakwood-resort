@@ -1,87 +1,73 @@
 import styled from "@emotion/styled";
-import { useEffect, useState } from "react"
+import React from "react";
 import CustomNav from "./CustomNav";
 
-const images = ["/slide2.jpg", "/slide3.webp", "/slide1.jpeg"]
+const images = ["/main.jpg"];
+const texts = ["A NATURAL HEAVEN"];
 
 const Container = styled.div`
-display:flex;
-width:100%;
-height:100vh;
-position:relative;
-overflow-x: hidden;
-// border:2px solid red;
-`;
-const Slide = styled.div`
-display:flex;
-height:100vh;
-width:100vw;
-// background-color: #${(props) => props.bg};
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
 `;
 
 const Imagecontainer = styled.div`
-flex:1;
-height:100%;
-`;
-const Image = styled.img`
-height:100%;
-width:100%;
+  flex: 1;
+  height: 100%;
+  position: relative;
 `;
 
-const Wrapper = styled.div`
+const Image = styled.img`
   height: 100%;
-  display: flex;
-  transition: all 2s ease;
-  transform: translateX(${(props) => props.current * -100}vw);
+  width: 100%;
 `;
 
 const Layer = styled.div`
-height:100%;
-width:100%;
-background:rgba(0, 0, 0, 0.4);
-position:absolute;
-// border:2px solid yellow;
-z-index:300;
-`
+  height: 100%;
+  width: 100%;
+  background: rgb(0 0 0 / 40%);
+  position: absolute;
+  z-index: 1;
+`;
 
-const Carousal = () => {
-  const [current, setCurrent] = useState(0)
+const TextOverlay = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index:100;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  & > h3 {
+    font-size: 36px;
+    font-weight:700; 
+  }
 
-  const createSlideImages = () => {
-    setCurrent(prevIndex => (prevIndex + 1) % images.length);
-  };
+  & > h1 {
+    font-size: 80px;
+    font-weight:700;
+    
+  }
+`;
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      createSlideImages();
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, [current]);
-
-  const img = images[current]
-
+const FirstImage = () => {
   return (
     <Container>
       <div className="fixed top-0 z-20 w-full">
         <CustomNav />
       </div>
       <Layer />
-      <Wrapper current={current}>
-        {
-          images.map((item, i) => {
-            return (
-              <Slide key={i}>
-                <Imagecontainer>
-                  <Image src={item} alt="" />
-                </Imagecontainer>
-              </Slide>
-            )
-          })
-        }
-      </Wrapper>
+      <Imagecontainer>
+        <Image src={images[0]} alt="" />
+        <TextOverlay >
+          <h3>{texts[0]}</h3>
+          <h1>BOOK YOUR TRIP</h1>
+        </TextOverlay>
+      </Imagecontainer>
     </Container>
-  )
-}
+  );
+};
 
-export default Carousal
+export default FirstImage;
