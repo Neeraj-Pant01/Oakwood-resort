@@ -12,7 +12,7 @@ display:flex;
 align-items:center;
 padding:30px 75px;
 justify-content:space-between;
-// background:rgba(0,0,0,0.5)
+background:rgba(0,0,0,0.5)
 `
 const Wrapper = styled.div`
 // border:2px solid red;

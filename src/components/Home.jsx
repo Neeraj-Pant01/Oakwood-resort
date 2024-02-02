@@ -5,6 +5,9 @@ import ResortInfo from './ResortInfo';
 import DemoRooms from './DemoRooms';
 import Excellence from './Excellence';
 import Reviews from './Reviews';
+import BookRoom from './BookRoom';
+import Planner from './Planner';
+import Footer from './Footer';
 
 const images = ["/slide2.jpg", "/slide3.webp", "/slide1.jpeg"]
 
@@ -59,6 +62,9 @@ const Home = () => {
     <DemoRooms />
     <Excellence />
     <Reviews />
+    <BookRoom />
+    <Planner />
+    <Footer />
     </>
   )
 }
