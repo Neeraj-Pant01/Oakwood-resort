@@ -12,7 +12,7 @@ display:flex;
 align-items:center;
 padding:30px 75px;
 justify-content:space-between;
-background:rgba(0,0,0,0.5)
+// background:rgba(0,0,0,0.5)
 `
 const Wrapper = styled.div`
 // border:2px solid red;
@@ -29,7 +29,9 @@ const StyledButton =styled('div')({
     justifyContent:"center",
     alignItems:"center",
     gap:10,
-    background:'#ffa37b',
+    background:'#99cf21',
+    borderRadius:10,
+    fontWeight:600,
     width:152,
     height:54,
     color:"white"
@@ -47,7 +49,7 @@ const CustomNav = () => {
             {
                 Links.map((l,i)=>{
                     return (
-                        <Typography key={i} color={i===0 ? "#ffa37b":"white"}>{l}</Typography>
+                        <Typography fontWeight="600" key={i} color={i===0 ? "#ffa37b":"white"}>{l}</Typography>
                     )
                 })
             }
