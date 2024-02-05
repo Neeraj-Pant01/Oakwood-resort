@@ -23,7 +23,9 @@ const About = () => {
                 <button className='md:px-12 md:py-3 text-[white] bg-[#ffa37b] w-fit px-10 py-2'>send</button>
             </form>
         </div>
-        <div className='flex flex-1 border'>google map</div>
+        <div className='flex flex-1'>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13764.072483127351!2d79.30894009904627!3d30.407227752171146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3909d458db25f9b9%3A0x3c8e88f7178344d7!2sGopeshwar%2C%20Uttarakhand%20246401!5e0!3m2!1sen!2sin!4v1707135428328!5m2!1sen!2sin" width="600" height="450" style={{border:"0"}}allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </div>
     <Footer />
     </div>
