@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import { Button, Typography } from '@mui/material'
 import React from 'react'
 import PhoneIcon from '@mui/icons-material/Phone';
+import { useNavigate } from 'react-router-dom';
 
 const Container = styled.div`
 // border:2px solid red;
@@ -40,8 +41,18 @@ const StyledButton =styled('div')({
 const Links = ["Home", "Discover","Blog", "About us","Contact Us"]
 
 const CustomNav = () => {
+
+    const navigate = useNavigate()
+
+    const changeNav = (l) =>{
+        if(l==='About us'){
+            navigate('/about')
+        }else if(l==="Home"){
+            navigate("/")
+        }
+    }
   return (
-    <Container>
+    <Container className='z-50'>
         <Wrapper>
         <Typography variant='h5' fontWeight={"bold"} color={"white"}>OAKWOOD RESORT</Typography>
         </Wrapper>
@@ -49,7 +60,7 @@ const CustomNav = () => {
             {
                 Links.map((l,i)=>{
                     return (
-                        <Typography fontWeight="600" key={i} color={i===0 ? "#ffa37b":"white"}>{l}</Typography>
+                        <Typography fontWeight="600" className='cursor-pointer' key={i} color={i===0 ? "#ffa37b":"white"} onClick={()=>changeNav(l)}>{l}</Typography>
                     )
                 })
             }

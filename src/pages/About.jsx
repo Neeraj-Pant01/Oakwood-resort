@@ -1,11 +1,18 @@
 import React from 'react'
 import CustomNav from '../customComponents/CustomNav'
 import Footer from '../components/Footer'
+import Videos from '../customComponents/Videos'
+import v1 from "../assets/v1.mp4"
 
 const About = () => {
   return (
     < div className='overflow-hidden'>
     <CustomNav />
+    <div className='flex flex-col mt-10'>
+      <Videos v1={v1} flex="flex-row"/>
+      <Videos v1={v1} flex="flex-row-reverse"/>
+      <Videos v1={v1} flex="flex-row"/>
+    </div>
     <div className='flex gap-10 md:gap-0 flex-col md:flex-row mt-10'>
         <div className='flex flex-1 flex-col md:ml-40'>
             <h1 className='text-[#2d2c2c] text-center md:text-left text-xl md:text-4xl font-bold'>Get In Touch</h1>
