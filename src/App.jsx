@@ -5,6 +5,7 @@ import About from './pages/About'
 import Discover from './pages/Discover'
 import CustomNav from './customComponents/CustomNav'
 import './index.css'
+import Contact from './components/Contact'
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Route path='/' element={<Home />} />
       <Route path='/about' element={<About />} />
       <Route path='/discover' element={<Discover />}/>
+      <Route path='/contact' element={<Contact />} />
     </Routes>
     </>
   )

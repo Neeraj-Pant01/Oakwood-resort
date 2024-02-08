@@ -55,9 +55,9 @@ const TextOverlay = styled.div`
 const FirstImage = () => {
   return (
     <Container>
-      <div className="fixed top-0 z-20 w-full">
-        <CustomNav />
-      </div>
+      {/* <div className="fixed top-0 z-20 w-full"> */}
+        {/* <CustomNav /> */}
+      {/* </div> */}
       <Layer />
       <Imagecontainer>
         <Image src={images[0]} alt="" />
