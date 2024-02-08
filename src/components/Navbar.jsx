@@ -64,15 +64,6 @@ display:flex;
 
     return (
         <>
-            {/* <StyledAppbar>
-                <Wrapper direction="row">
-                    <Typography>email@email.com</Typography>
-                    <Typography>9012010713</Typography>
-                </Wrapper>
-                <Wrapper>
-
-                </Wrapper>
-            </StyledAppbar> */}
             <CustomNav />
         </>
     );
