@@ -38,7 +38,7 @@ const StyledButton =styled('div')({
     color:"white"
 })
 
-const Links = ["Home", "Discover","Blog", "About us","Contact Us"]
+const Links = ["Home", "Services", "About us","Contact Us"]
 
 const CustomNav = () => {
 
@@ -47,7 +47,11 @@ const CustomNav = () => {
     const changeNav = (l) =>{
         if(l==='About us'){
             navigate('/about')
-        }else if(l==="Home"){
+        }
+        else if(l==='Services'){
+            navigate('/discover');
+        }
+        else if(l==="Home"){
             navigate("/")
         }
     }
