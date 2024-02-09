@@ -37,7 +37,7 @@ const images = ["/slide2.jpg", "/slide3.webp", "/slide1.jpeg"]
 //   });
 
 const StyledBox = styled('div')({
-  height: '100vh',
+  height: '80vh',
   // border:"2px solid yellow"
 });
 
