@@ -59,6 +59,9 @@ const CustomNav = () => {
         else if(l==="Home"){
             navigate("/")
         }
+        else if(l=="Contact Us"){
+            navigate('/contact')
+        }
     }
   return (
     <Container className='z-50'>

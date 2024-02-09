@@ -83,6 +83,7 @@ const StyledButton = styled(Button)`
 const FirstImage = () => {
   return (
     <Container>
+
       <div className="fixed top-0 z-20 w-full">
         {/* <CustomNav /> */}
       </div>
@@ -102,6 +103,7 @@ const FirstImage = () => {
         </StyledImage>
     </MainComp>
        
+
     </Container>
   );
 };
